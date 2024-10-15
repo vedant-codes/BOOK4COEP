@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+    
+    <title>User</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+</head>
+
+<body>
+
+        <div class="container">
+            <aside>
+                <div class="toggle">
+                    <div class="logo">
+                        <h2>BOOK4<span class="danger">COEP</span></h2>
+                    </div>
+                    <div class="close" id="close-btn">
+                        <span class="material-icons-sharp">
+                            close
+                        </span>
+                    </div>
+                </div>
+    
+                <div class="sidebar">
+                    <a href="dashboard.html" class="active">
+                        <span class="material-icons-sharp">
+                            dashboard
+                        </span>
+                        <h3>Dashboard</h3>
+                    </a>
+                    <a href="users.html" >
+                        <span class="material-icons-sharp">
+                            person_outline
+                        </span>
+                        <h3>Users</h3>
+                    </a>
+    
+                    <a href="admin.html" >
+                        <span class="material-icons-sharp">
+                            insights
+                        </span>
+                        <h3>Analytics</h3>
+                    </a>
+
+                    <a href="manage.html">
+                        <span class="material-icons-sharp">
+                            <span class="material-symbols-outlined">
+                                manage_accounts
+                                </span>
+                        </span>
+                        <h3>Manage</h3>
+                    </a>
+                   
+                    <a href="login.html">
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>New Login</h3>
+                    </a>
+                    
+                    <a href="login.html" onclick="alert('logging out!')">
+                        <span class="material-icons-sharp">
+                            logout
+                        </span>
+                        <h3>Logout</h3>
+                    </a>
+                </div>
+            </aside>
+            <!-- End of Sidebar Section -->
+        <!-- Main Content -->
+        <main>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+            <h1>Dashboard</h1>
+            <!-- Recent Orders Table -->
+            <div class="details">
+                <div class="chart">
+                    <canvas id="myChart"></canvas>
+
+                </div>
+            </div>
+            <div class="details">
+                <div class="pie">
+                    <canvas id="Chart"></canvas>
+
+                    
+                </div>
+            </div>
+              
+        </main>
+        <!-- End of Main Content -->
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b id = "name3">Vedant</b></p>
+                        <small class="text-muted">User</small>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+
+            <div class="user-profile">
+                <div class="logo">
+                    <h2>BOOK4COEP</h2>
+                    <p>LIBRARY MANAGEMENT SYSTEM</p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Reports</h2>
+                </div>
+
+                
+
+            
+
+
+                <br>
+                <h2>SCAN QR</h2>
+                <img src="qr.jpg" style="width: 320px;">
+
+            </div>
+
+            </div>
+
+            
+
+            </div>
+
+        </div>
+    <script type="module" src="dashboard.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>
