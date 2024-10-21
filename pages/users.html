@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <h2>BOOK4<span class="danger">COEP</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="dashboard.html">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="users.html" class="active">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Users</h3>
+                </a>
+
+                <a href="admin.html" >
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="manage.html">
+                    <span class="material-icons-sharp">
+                        <span class="material-symbols-outlined">
+                            manage_accounts
+                            </span>
+                    </span>
+                    <h3>Manage</h3>
+                </a>
+                <a href="login.html">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>New Login</h3>
+                </a>
+    
+                <a href="login.html" onclick="alert('logging out!')">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <h1>Users</h1>
+            <!-- Analyses -->
+            <div class="analyse">
+                <div class="sales">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Total Users</h3>
+                            <h1 id="totalqty">0</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+81%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="visits">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Blocked Users</h3>
+                            <h1 id="issueqty">0</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>-48%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="searches">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Deleted Users</h3>
+                            <h1 id="dueqty">0</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+21%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Orders Table -->
+            <div class="recent-orders">
+                <h2>All Users</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>email</th>
+                            <th>Book1</th>
+                            <th>Book2</th>
+                            <th>Account Status</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div>
+            <!-- End of Recent Orders -->
+
+        </main>
+        <!-- End of Main Content -->
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Vedant</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+
+            <div class="user-profile">
+                <div class="logo">
+                    <h2>BOOK4COEP</h2>
+                    <p>LIBRARY MANAGEMENT SYSTEM</p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="reminders">
+                    <div class="header">
+                        <h2>Report</h2>
+                    </div>
+                    <div class="notification deactive">
+                        <div class="icon">
+                            <span class="material-icons-sharp">
+                                edit
+                            </span>
+                        </div>
+                        <div class="content">
+                            <button id="export-button" class="export">Export to Excel</button>
+                            <span class="material-icons-sharp">
+                                more_vert
+                            </span>
+                        </div>
+                    </div>
+    
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="xlsx.full.min.js"></script>
+        <script>
+            function exportToExcel() {
+                // Get the table element
+                const table = document.querySelector('table');
+    
+                // Create a new Excel file
+                const wb = XLSX.utils.book_new();
+    
+                // Convert the table to a worksheet
+                const ws = XLSX.utils.table_to_sheet(table);
+    
+                // Add the worksheet to the Excel file
+                XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+    
+                // Save the Excel file
+                XLSX.writeFile(wb, "table_data.xlsx");
+            }
+    
+            document.addEventListener('DOMContentLoaded', () => {
+                // Attach the exportToExcel function to the export button click event
+                const exportButton = document.getElementById('export-button');
+                exportButton.addEventListener('click', exportToExcel);
+            });
+        </script>
+
+    <script src="users.js" type = "module"></script>
+</body>
+
+</html>

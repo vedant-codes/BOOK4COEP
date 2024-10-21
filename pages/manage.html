@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="manage.css">
+    
+    <title>Manage</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <h2>BOOK4<span class="danger">COEP</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="dashboard.html">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="users.html">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Users</h3>
+                </a>
+
+                <a href="admin.html" >
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="manage.html" class="active">
+                    <span class="material-icons-sharp">
+                        manage_accounts
+                    </span>
+                    <h3>Manage</h3>
+                </a>
+                <a href="login.html">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>New Login</h3>
+                </a>
+                <a href="login.html" onclick="alert('logging out!')">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+            
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+               
+            <div class="right-section">
+                <h1>Manage</h1>
+                <div class="nav">
+                    <button id="menu-btn">
+                        <span class="material-icons-sharp">
+                            menu
+                        </span>
+                    </button>
+                    <div class="dark-mode">
+                        <span class="material-icons-sharp active">
+                            light_mode
+                        </span>
+                        <span class="material-icons-sharp">
+                            dark_mode
+                        </span>
+                    </div>
+    
+                    <div class="profile">
+                        <div class="info">
+                            <p>Hey, <b>Vedant</b></p>
+                            <small class="text-muted">Admin</small>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+     
+
+            <div class="down">
+                <div class="approval">
+                    <div class="section2">
+                        <h2>Approval and Late Fee : </h2>
+                        <form >
+                            <input type="text" id="opt" placeholder="Enter Book ID" required><br><br>
+                            <br><br>
+                            <button id="show" class="hye">search</button>
+                            <button id="approve" class="hey">approve</button>
+                        </form> 
+                    </div>
+                    
+                    
+                    <div class="section1">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Book Name</th>
+                                    <th>Status</th>
+                                    <th>Late Fee</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="r11"></td>
+                                    <td id="r12"></td>
+                                    <td id="r16"></td>
+                                    <td class="${user.status === 'Blocked' ? 'danger' : user.status === 'Online' ? 'success' : 'primary'}" id="r13"></td>
+                                   
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="manage.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>
