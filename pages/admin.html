@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="/css/admin.css">
     <title>Dashboard</title>
 </head>
 
@@ -25,27 +25,27 @@
             </div>
 
             <div class="sidebar">
-                <a href="dashboard.html">
+                <a href="/pages/dashboard.html">
                     <span class="material-icons-sharp">
                         dashboard
                     </span>
                     <h3>Dashboard</h3>
                 </a>
-                <a href="users.html">
+                <a href="/pages/users.html">
                     <span class="material-icons-sharp">
                         person_outline
                     </span>
                     <h3>Users</h3>
                 </a>
 
-                <a href="admin.html" class="active">
+                <a href="/pages/admin.html" class="active">
                     <span class="material-icons-sharp">
                         insights
                     </span>
                     <h3>Analytics</h3>
                 </a>
         
-                <a href="manage.html">
+                <a href="/pages/manage.html">
                     <span class="material-icons-sharp">
                         <span class="material-symbols-outlined">
                             manage_accounts
@@ -53,13 +53,13 @@
                     </span>
                     <h3>Manage</h3>
                 </a>
-                <a href="login.html">
+                <a href="/root-directory/index.html">
                     <span class="material-icons-sharp">
                         add
                     </span>
                     <h3>New Login</h3>
                 </a>
-                <a href="login.html" onclick="alert('logging out!')">
+                <a href="/root-directory/index.html" onclick="alert('logging out!')">
                     <span class="material-icons-sharp">
                         logout
                     </span>
@@ -209,7 +209,7 @@
 
     </div>
 
-        <script src="xlsx.full.min.js"></script>
+        <script src="/js/xlsx.full.min.js"></script>
         <script>
             function exportToExcel() {
                 // Get the table element
@@ -235,8 +235,8 @@
             });
         </script>
 
-    <script src="orders.js" type = "module"></script>
-    <script src="admin.js"></script>
+    <script src="/js/orders.js" type = "module"></script>
+    <script src="/js/admin.js"></script>
 </body>
 
 </html>
