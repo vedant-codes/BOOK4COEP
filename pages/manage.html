@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-    <link rel="stylesheet" href="manage.css">
+    <link rel="stylesheet" href="/css/manage.css">
     
     <title>Manage</title>
 </head>
 
 <body>
-
     <div class="container">
         <aside>
             <div class="toggle">
@@ -26,45 +25,47 @@
             </div>
 
             <div class="sidebar">
-                <a href="dashboard.html">
+                <a href="/pages/dashboard.html">
                     <span class="material-icons-sharp">
                         dashboard
                     </span>
                     <h3>Dashboard</h3>
                 </a>
-                <a href="users.html">
+                <a href="/pages/users.html">
                     <span class="material-icons-sharp">
                         person_outline
                     </span>
                     <h3>Users</h3>
                 </a>
 
-                <a href="admin.html" >
+                <a href="/pages/admin.html">
                     <span class="material-icons-sharp">
                         insights
                     </span>
                     <h3>Analytics</h3>
                 </a>
-                <a href="manage.html" class="active">
+        
+                <a href="/pages/manage.html"  class="active">
                     <span class="material-icons-sharp">
-                        manage_accounts
+                        <span class="material-symbols-outlined">
+                            manage_accounts
+                            </span>
                     </span>
                     <h3>Manage</h3>
                 </a>
-                <a href="login.html">
+                <a href="/root-directory/index.html">
                     <span class="material-icons-sharp">
                         add
                     </span>
                     <h3>New Login</h3>
                 </a>
-                <a href="login.html" onclick="alert('logging out!')">
+                <a href="/root-directory/index.html" onclick="alert('logging out!')">
                     <span class="material-icons-sharp">
                         logout
                     </span>
                     <h3>Logout</h3>
                 </a>
             </div>
-            
         </aside>
         <!-- End of Sidebar Section -->
 
@@ -140,8 +141,8 @@
         </main>
     </div>
 
-    <script type="module" src="manage.js"></script>
-    <script src="admin.js"></script>
+    <script type="module" src="/js/manage.js"></script>
+    <script src="/js/admin.js"></script>
 </body>
 
 </html>
