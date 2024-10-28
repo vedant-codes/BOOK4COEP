@@ -7,51 +7,51 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="faq.css" />
+    <link rel="stylesheet" href="/css/faq.css" />
     <title>User</title>
   </head>
 
   <body>
     <div class="container">
       <aside>
-        <div class="toggle">
-          <div class="logo">
-            <h2>BOOK4<span class="danger">COEP</span></h2>
+          <div class="toggle">
+              <div class="logo">
+                  <h2>BOOK4<span class="danger">COEP</span></h2>
+              </div>
+              <div class="close" id="close-btn">
+                  <span class="material-icons-sharp"> close </span>
+              </div>
           </div>
-          <div class="close" id="close-btn">
-            <span class="material-icons-sharp"> close </span>
+
+          <div class="sidebar">
+              <a href="/pages/ui.html">
+                  <span class="material-icons-sharp"> dashboard </span>
+                  <h3>Discover</h3>
+              </a>
+              <a href="/pages/profile.html">
+                  <span class="material-icons-sharp"> person_outline </span>
+                  <h3>Profile</h3>
+              </a>
+
+              <a href="/pages/allbooks.html">
+                  <span class="material-icons-sharp"> book </span>
+                  <h3>All Books</h3>
+              </a>
+              <a href="/pages/ebooks.html">
+                  <span class="material-icons-sharp"> menu_book </span>
+                  <h3>E Books</h3>
+              </a>
+              <a href="/pages/faq.html" class="active">
+                  <span class="material-icons-sharp"> quiz </span>
+                  <h3>FAQ</h3>
+              </a>
+              <a href="/root-directory/index.html" onclick="alert('logging out!')">
+                  <span class="material-icons-sharp">
+                      logout
+                  </span>
+                  <h3>Logout</h3>
+              </a>
           </div>
-        </div>
-
-        <div class="sidebar">
-          <a href="ui.html">
-            <span class="material-icons-sharp"> dashboard </span>
-            <h3>Discover</h3>
-          </a>
-          <a href="profile.html">
-            <span class="material-icons-sharp"> person_outline </span>
-            <h3>Profile</h3>
-          </a>
-
-          <a href="allbooks.html">
-            <span class="material-icons-sharp"> book </span>
-            <h3>All Books</h3>
-          </a>
-          <a href="ebooks.html">
-            <span class="material-icons-sharp"> menu_book </span>
-            <h3>E Books</h3>
-          </a>
-          <a href="faq.html" class="active">
-            <span class="material-icons-sharp"> quiz </span>
-            <h3>FAQ</h3>
-          </a>
-          <a href="login.html" onclick="alert('logging out!')">
-            <span class="material-icons-sharp">
-                logout
-            </span>
-            <h3>Logout</h3>
-        </a>
-        </div>
       </aside>
       <!-- End of Sidebar Section -->
 
@@ -196,5 +196,5 @@
 
 </script>
 
-  <script type="module" src="admin.js"></script>
+  <script type="module" src="/js/admin.js"></script>
 </html>
