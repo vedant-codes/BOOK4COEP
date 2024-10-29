@@ -8,7 +8,7 @@
 }
 
 body{
-    background: url(coep.jpg);
+    background: url(/assets/coep.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
